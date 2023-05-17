@@ -9,9 +9,9 @@ class AlbumForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Title'}),
             'description': forms.Textarea(attrs={'placeholder': 'Description'}),
-            'image': forms.URLField(attrs={'type': 'url'}),
+            'image': forms.URLInput(attrs={'type': 'url'}),
             'artist': forms.TextInput(attrs={'placeholder': 'Artist'}),
-            'genre': forms.TextInput(attrs={'placeholder': 'Genre'}),
+            #
         }
         labels = {
             'title': 'Title',

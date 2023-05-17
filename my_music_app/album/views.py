@@ -13,7 +13,8 @@ def add_album(request):
 
     if form.is_valid():
         album = form.save()
-        user.albums.add(album)
+        album.user = user
+        album.save()
         return redirect('home-page')
 
     return render(request=request, template_name='add-album.html', context=context)
