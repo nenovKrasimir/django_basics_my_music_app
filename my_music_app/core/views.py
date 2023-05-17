@@ -14,6 +14,7 @@ def home_page(request):
     if check_user_exist():
         user = Profile.objects.first()
         context['user_albums'] = user.album_set.all()
+        context['user'] = user
         return render(request=request, template_name='home-with-profile.html', context=context)
 
     if form.is_valid():

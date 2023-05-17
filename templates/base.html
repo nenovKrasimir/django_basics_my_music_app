@@ -20,10 +20,9 @@
             <a href="{% url 'home-page' %}">Home</a>
             <ul></ul>
             <ul>
-                <!--Only for user with created profile-->
-                {% if profile is not None %}
-                <li><a href="{% url 'album_add' %}">Create Album</a></li>
-                <li><a href="{% url 'profile_details' %}">Profile</a></li>
+                {% if user %}
+                <li><a href="#">Create Album</a></li>
+                <li><a href="{% url 'profile-details' %}">Profile</a></li>
                 {% endif %}
             </ul>
         </nav>

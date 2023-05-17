@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'music_app_db',
         'USER': 'postgres',
-        'PASSWORD': '11',
+        'PASSWORD': 'krask0swes1',
         'HOST': '127.0.0.1',
         'PORT': '5432'
     }
