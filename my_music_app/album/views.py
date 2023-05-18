@@ -39,6 +39,17 @@ def album_edit(request, pk):
     context = {'album': album, 'form': form}
     return render(request=request, template_name='edit-album.html', context=context)
 
+
 def album_delete(request, pk):
     album = Album.objects.get(id=pk)
     form = AlbumForm(request.POST or None, instance=album)
+
+    if request.method == "GET":
+        for field in form.fields.values():
+            field.widget.attrs['disabled'] = 'disabled'
+
+        context = {'album': album, 'form': form}
+        return render(request=request, template_name='delete-album.html', context=context)
+
+    album.delete()
+    return redirect('home-page')

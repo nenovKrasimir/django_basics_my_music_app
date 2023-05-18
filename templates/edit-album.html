@@ -2,7 +2,7 @@
 {% block content %}
 <!--Edit Page-->
 <section class="editPage">
-    <form method="post" action="{% url 'album-edit' pk=album.pk %}">
+    <form method="post" action="{% url 'album-edit' pk=album.id %}">
         <fieldset>
             <legend>Edit Album</legend>
             <div class="container">
