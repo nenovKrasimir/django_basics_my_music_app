@@ -28,8 +28,8 @@
   </code></pre>
    <li>Configure the database:</li>
   <pre><code>
-    <!-- Open the `settings.py` file in your project directory. -->
-    <!-- Modify the database settings according to your setup (engine, host, port, username, password, database name). -->
+    Open the `settings.py` file in your project directory. -->
+    Modify the database settings according to your setup (engine, host, port, username, password, database name). -->
   </code></pre>
 
   <li>Apply database migrations:</li>
